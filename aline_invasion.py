@@ -2,6 +2,7 @@
 import sys
 import pygame
 from settings import Settings
+from ship import Ship
 
 
 def run_game():
@@ -12,11 +13,10 @@ def run_game():
     screen = pygame.display.set_mode(
         (ai_settings.screen_width, ai_settings.screen_height))
 
-    screen = pygame.display.set_mode((600, 800))
     pygame.display.set_caption("Aline Invasion")
 
-    # 设置背景色
-    bg_color = (230, 230, 230)
+    # 创建一艘飞船
+    ship = Ship(screen)
 
     # 开始游戏的主循环
     while True:
@@ -28,7 +28,7 @@ def run_game():
 
         # 每次循环时都重绘屏幕
         screen.fill(ai_settings.bg_color)
-        screen.fill(bg_color)
+        ship.blitme()
 
         # 让最近绘制的屏幕可见
         pygame.display.flip()
