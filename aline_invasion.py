@@ -16,7 +16,7 @@ def run_game():
     pygame.display.set_caption("Aline Invasion")
 
     # 创建一艘飞船
-    ship = Ship(screen)
+    ship = Ship(ai_settings, screen)
 
     # 开始游戏的主循环
     while True:
