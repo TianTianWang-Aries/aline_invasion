@@ -6,6 +6,11 @@ import sys
 import pygame
 
 
+def check_keydown_events(event, ship):
+    """响应按键"""
+
+
+
 def check_events(ship):
     """响应鼠标和按键事件"""
     for event in pygame.event.get():

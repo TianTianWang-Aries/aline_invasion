@@ -18,7 +18,7 @@ def run_game():
     # 创建一艘飞船
     ship = Ship(ai_settings, screen)
 
-    # 开始游戏的主循环
+    # 开始游戏的主循环w
     while True:
         gf.check_events(ship)
         ship.update()
